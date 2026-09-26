@@ -22,7 +22,7 @@ jobs:
       - name: Lint with flake8
         run: flake8 src tests --max-line-length=100
       - name: Run tests
-        run: pytest --junitxml=results.xml -v
+        run: pytest --junitxml=results.xml -v4
       - name: Upload test results
         if: always()
         uses: actions/upload-artifact@v4
